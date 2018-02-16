@@ -1,0 +1,318 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*            End of CSS Reset            */
+
+/*                 Setup                  */
+
+/*               Borderbox                */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* clearfix */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+/*               End of Setup             */
+
+/* fonts*/
+@font-face { font-family: IP ; src: url('fonts/myriad-set-pro_thin.ttf'); }
+@font-face { font-family: IPB ; font-weight: bold; src: url('fonts/myriad-set-pro_medium.ttf');}
+@font-face { font-family: IPPB ; font-weight: bold; src: url('fonts/myriad-set-pro_bold.ttf');}
+/*colors
+#333333; dark grey
+#67b8c6; baby blue
+#9abfd6; baby blue #2
+#5e6060; darker grey than above
+*/
+a:hover{
+  text-decoration: underline;
+}
+
+/*navbar*/
+.navbar{
+  background-color: #333333;
+  width: 100%;
+  height: 44px;
+  position: fixed;
+  z-index: 4;
+}
+
+.navbar li{
+  display: inline-block;
+  margin-top: 0%;
+}
+.navbar ul{
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.navbar a:hover{
+  opacity: rgba(0, 0, 0, 0.3%);
+}
+
+
+/*bg iphone + text*/
+.front{
+  background-color: white;
+  z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.iphonebg{
+  margin-top: 1%;
+  z-index: 1;
+  padding-top: 3%;
+}
+
+.iphone6{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: IP;
+  color: #333;
+  font-size: 36px;
+
+}
+.h1ip{
+  margin-top: 3%;
+}
+.ipfoto{
+  margin-left: -4%;
+
+}
+.learn{
+  font-family: IPB;
+  font-size: 24px;
+  text-decoration: none;
+  color: #67b8c6;
+}
+.watch{
+  text-decoration: none;
+  font-family: IPB;
+  font-size: 24px;
+  color: #67b8c6;
+}
+
+/*photo celle*/
+.iphotos{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+
+}
+.iphotos div{
+  overflow: hidden;
+  width: 24.9%;
+  margin-top: 2%;
+  height: 180px;
+}
+.iwatch img{
+  overflow: hidden;
+  height: 180px;
+  margin-left: -37%;
+}
+.ipad img{
+  overflow: hidden;
+  height: 180px;
+  margin-left: -37%;
+}
+.iacces img{
+  overflow: hidden;
+  height: 180px;
+  margin-left: -37%;
+}
+.imacbook{
+  overflow: hidden;
+  height: 180px;
+  margin-left: -37%;
+}
+
+/*.ipad{
+  width: 25%;
+}
+.iacces{
+  width: 25%;
+}
+.imacbook{
+  width: 25%;
+}
+*/
+.highlight{
+  text-align: center;
+  margin-top: 2%;
+  height: 40px;
+
+}
+.highlight a{
+  text-decoration: none;
+  font-family: IPB;
+  font-size: 17px;
+  color: #67b8c6;
+}
+.highlight a:hover{
+  text-decoration: underline;
+  text-decoration-color: #67b8c6;
+}
+/*footer*/
+footer{
+  width: 100%;
+  height: 390px;
+  background-color: #f2f2f2;
+}
+.bottom{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3%;
+
+}
+.bottom a{
+  text-decoration: none;
+  color: #5e6060;
+  font-family: IPB;
+  font-size: 12px;
+}
+.bottom a:hover{
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.bottom h1{
+  color: #333;
+  font-family: IPPB;
+  font-size: 12px;
+}
+.bottom h1, li{
+  margin-top: 5%;
+}
+/*col specific*/
+.col1{
+  margin-left: 10%;
+}
+.col7{
+  margin-right: 18%;
+}
+.col4 h1{
+  margin-top: 30%;
+}
+.col6 h1{
+  margin-top: 30%;
+}
+/*2nd part footer*/
+.stuff{
+  margin-left: 13.2%;
+  font-family: IPB;
+  font-size: 12px;
+  color: grey;
+  margin-top: 2%;
+  border-bottom: 1px solid #d2d7d8; /*border color !*/
+  padding-bottom: 0.8%;
+  margin-right: 15%;
+}
+.stuff a{
+  text-decoration: none;
+  color: #46acc9;
+}
+.stuff a:hover{
+  text-decoration: underline;
+}
+/*3rd part footer*/
+.stuff2{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.5%;
+
+}
+.stuff2 a{
+  text-decoration: none;
+  color: #5e6060;
+  font-family: IPB;
+  font-size: 12px;
+}
+.stext{
+  margin-left: 13.2%;
+  font-family: IPB;
+  font-size: 12px;
+  color: grey;
+  margin-top: 0.3%;
+}
+.privacy, .terms, .SnR, .map {
+  margin-left: 1%;
+}
+.privacy, .terms, .SnR{
+  border-right: 1px solid #d2d7d8;
+  padding-right: 1%;
+}
+.america{
+  margin-left: 0.5%;
+}
+.flag{
+  margin-left: 21%;
+}
+.stuff2 a:hover{
+  text-decoration: underline;
+  text-decoration-color: black;
+}
